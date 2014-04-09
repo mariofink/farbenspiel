@@ -19,7 +19,6 @@
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
-        <script src="bower_components/tinycolor/tinycolor.js"></script>
         <!-- endbuild -->
 
     </head>
@@ -33,13 +32,7 @@
 
         <form id="farbForm">
             <input type="color" name="colour" id="colour" class="js-triggerSubmit">
-            <select name="combination" id="combination" class="js-triggerSubmit">
-                <option value="analogous">analogous</option>
-                <option value="monochromatic">monochromatic</option>
-                <option value="splitcomplement">splitcomplements</option>
-                <option value="triad">triad</option>
-                <option value="tetrad">tetrad</option>
-            </select>
+            <button type="submit">Submit</button>
         </form>
 
         <div id="farbspiel"></div>
@@ -48,6 +41,7 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/tinycolor/tinycolor.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

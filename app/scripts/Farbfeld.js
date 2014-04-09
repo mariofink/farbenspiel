@@ -6,7 +6,9 @@
             return _col;
         };
         this.draw = function() {
-            var el = $("<div></div>");
+            var el = $("<div></div>").addClass("farbfeld");
+            console.log("draw", this.getColour().toHexString());
+            el.css("background-color", this.getColour().toHexString());
             el.html(this.getColour());
             return el;
         };

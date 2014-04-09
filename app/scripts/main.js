@@ -6,10 +6,9 @@
         this.form = new app.Farbform($("#farbForm"), this.farbfelder);
     }
 
-    var fs = new FarbenSpiel('#000');
+    var fs = new FarbenSpiel('#bada55');
 
     function init() {
-        console.log(fs);
         fs.farbfelder.draw();
     }
 
