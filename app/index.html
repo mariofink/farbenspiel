@@ -10,8 +10,10 @@
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
+        <link rel="stylesheet" href="bower_components/jquery-minicolors/jquery.minicolors.css"/>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -28,12 +30,13 @@
         <![endif]-->
 
 
-        <h1>Farbenspiel</h1>
-
-        <form id="farbForm">
-            <input type="color" name="colour" id="colour" class="js-triggerSubmit">
-            <button type="submit">Submit</button>
-        </form>
+        <header>
+            <h1>Farbenspiel</h1>
+            <form id="farbForm">
+                <input type="text" name="colour" class="colourInput" value="#bada55">
+                <button type="submit">Submit</button>
+            </form>
+        </header>
 
         <div id="farbspiel" class="combo-container"></div>
 
@@ -42,6 +45,7 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/tinycolor/tinycolor.js"></script>
+        <script src="bower_components/jquery-minicolors/jquery.minicolors.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

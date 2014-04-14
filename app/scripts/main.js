@@ -1,16 +1,18 @@
 (function () {
     'use strict';
 
-    function FarbenSpiel(_col) {
+    function FarbenSpiel(_col, _form) {
         this.farbfelder = new app.Farbfelder(_col, $("#farbspiel"));
-        this.form = new app.Farbform($("#farbForm"), this.farbfelder);
+        this.form = new app.Farbform(_form, this.farbfelder);
     }
 
-    var fs = new FarbenSpiel('#bada55');
+    var fs = new FarbenSpiel('#bada55', $("#farbForm"));
 
     function init() {
         fs.farbfelder.draw();
     }
 
-    $(document).ready(init);
+    $(document).ready(function() {
+        init();
+    });
 })();
