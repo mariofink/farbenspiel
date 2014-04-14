@@ -56,6 +56,13 @@ header {
     height: 1em;
   }
 }
+.minicolors .minicolors-grid,
+.minicolors-slider-saturation .minicolors-grid-inner,
+.minicolors-slider,
+.minicolors-opacity-slider {
+  background-image: url(../bower_components/jquery-minicolors/jquery.minicolors.png);
+}
+
 
 .about {
   padding: 4em 1em 2em 1em;
