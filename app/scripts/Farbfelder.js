@@ -11,9 +11,10 @@
             canvas.empty();
             var combos = getAllCombinations(baseColour);
             for (var i in combos) {
-                console.log("combo", i);
-                canvas.append("<h2>" + i + "</h2>");
-                canvas.append(drawFieldsForCombination(combos[i]));
+                var container = $("<section class='combination'></section>");
+                container.append("<h2>" + i + "</h2>");
+                container.append(drawFieldsForCombination(combos[i]));
+                canvas.append(container);
             }
         };
 

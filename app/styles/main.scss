@@ -1,6 +1,12 @@
 // bower:scss
 // endbower
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
     background: #fff;
     font-family: sans-serif;
@@ -15,6 +21,14 @@ body {
 }
 
 .farbfeld {
-  width: 200px;
   height: 200px;
+}
+
+.combo-container {
+  display: table;
+  width: 100%;
+}
+.combination {
+  display: table-cell;
+  width: 20%;
 }
