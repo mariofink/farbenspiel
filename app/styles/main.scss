@@ -1,6 +1,9 @@
 // bower:scss
 // endbower
 
+@import "compass/css3";
+@import "compass/utilities/links/link-colors";
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -8,9 +11,13 @@
 }
 
 body {
-    background: #fff;
+    background: #444;
     font-family: Lato, "Helvetica Neue", sans-serif;
-    color: #333;
+    color: #aaa;
+}
+
+a {
+  @include link-colors(#ddd);
 }
 
 .browsehappy {
@@ -20,6 +27,10 @@ body {
     padding: 0.2em 0;
 }
 
+h1 {
+  font-weight: 300;
+  @include text-shadow(0.05em 0.05em 0 #333);
+}
 header {
   text-align: center;
 }
@@ -35,7 +46,9 @@ header {
 .combination {
   h2 {
     font-size: 1em;
+    font-weight: 300;
     text-align: center;
+    @include text-shadow(0.05em 0.05em 0 #333);
   }
   display: table-cell;
   vertical-align: top;
