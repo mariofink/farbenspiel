@@ -19,6 +19,9 @@ body {
 a {
   @include link-colors(#ddd);
 }
+input, button {
+  color: #333;
+}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -38,6 +41,12 @@ header {
 .farbfeld {
   height: 100px;
   border-bottom: 1px solid #000;
+  .details {
+    color: #333;
+    @include text-shadow(0 0 2px #fff);
+    display: none;
+    padding: 1em;
+  }
 }
 
 .combo-container {
@@ -57,17 +66,25 @@ header {
   width: 20%;
 }
 
+
+
+.about {
+  padding: 4em 1em 2em 1em;
+}
+
 .minicolors-theme-default {
   .minicolors-input {
+    border: 0;
     height: inherit;
     display: inherit;
-    padding-left: 1.5em;
+    padding: 0.5em 0.5em 0.5em 2.25em;
+    width: 150px;
   }
   .minicolors-swatch {
-    top: 0.25em;
-    left: 0.25em;
-    width: 1em;
-    height: 1em;
+    top: 0.4em;
+    left: 0.4em;
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 .minicolors .minicolors-grid,
@@ -75,9 +92,4 @@ header {
 .minicolors-slider,
 .minicolors-opacity-slider {
   background-image: url(../bower_components/jquery-minicolors/jquery.minicolors.png);
-}
-
-
-.about {
-  padding: 4em 1em 2em 1em;
 }

@@ -16,7 +16,16 @@
                 container.append(drawFieldsForCombination(combos[i]));
                 canvas.append(container);
             }
+            addEvents();
         };
+
+        function addEvents() {
+            $(".farbfeld").hover(function() {
+                $(this).find(".details").stop().fadeIn();
+            }, function() {
+                $(this).find(".details").stop().fadeOut();
+            });
+        }
 
         function getAllCombinations(base) {
             var combos = {};
