@@ -3,7 +3,7 @@
     'use strict';
     function Farbfelder(_baseCol, canvas) {
         var baseColour = _baseCol;
-        var comboTypes = ["analogous","monochromatic","splitcomplement","triad","tetrad"];
+        var comboTypes = ["monochromatic","analogous","tetrad","splitcomplement","triad"];
         this.setBaseColour = function(col) {
             baseColour = col;
         };
@@ -22,6 +22,10 @@
             var combos = {};
             for (var i = 0, len = comboTypes.length; i<len; i++) {
                 var colours = tinycolor[comboTypes[i]](base);
+                // reverse order and while keeping the base at the beginning
+                var first = colours.shift();
+                colours = colours.reverse();
+                colours.unshift(first);
                 combos[comboTypes[i]] = createFieldsForCombination(colours);
             }
             return combos;
