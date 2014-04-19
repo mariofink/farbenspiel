@@ -1,7 +1,7 @@
 farbenspiel
 ===========
 
-[Live example at farbenspiel.mariofink.de](http://farbenspiel.mariofink.de)
+**[Live example at farbenspiel.mariofink.de](http://farbenspiel.mariofink.de)**
 
 A colour scheme playground built with
 * <a href="http://yeoman.io">Yeoman</a>
