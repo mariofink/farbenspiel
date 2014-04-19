@@ -1,0 +1,27 @@
+.farbfeld {
+  height: 100px;
+  border-bottom: 1px solid #000;
+  .details {
+    color: #333;
+    @include text-shadow(0 0 2px #fff);
+    display: none;
+    padding: 1em;
+  }
+}
+
+.combo-container {
+  display: table;
+  width: 100%;
+}
+.combination {
+  h2 {
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    @include text-shadow(0.05em 0.05em 0 #333);
+  }
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 0.5em;
+  width: 20%;
+}

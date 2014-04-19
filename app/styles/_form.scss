@@ -1,0 +1,25 @@
+input, button {
+  color: #333;
+}
+
+.minicolors-theme-default {
+  .minicolors-input {
+    border: 0;
+    height: inherit;
+    display: inherit;
+    padding: 0.5em 0.5em 0.5em 2.25em;
+    width: 150px;
+  }
+  .minicolors-swatch {
+    top: 0.4em;
+    left: 0.4em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+.minicolors .minicolors-grid,
+.minicolors-slider-saturation .minicolors-grid-inner,
+.minicolors-slider,
+.minicolors-opacity-slider {
+  background-image: url(../bower_components/jquery-minicolors/jquery.minicolors.png);
+}
