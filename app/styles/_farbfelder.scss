@@ -16,14 +16,9 @@
   }
   vertical-align: top;
   padding: 0 0.5em;
-  &.monochromatic {
+  &.monochromatic, &.analogous {
     .farbfeld {
       width: 16.66%;
-    }
-  }
-  &.analogous {
-    .farbfeld {
-      width: 20%;
     }
   }
   &.tetrad {
