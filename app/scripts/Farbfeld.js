@@ -7,8 +7,9 @@
         };
         this.draw = function() {
             var el = $("<div></div>").addClass("farbfeld");
-            console.log("draw", this.getColour().toHexString());
+//            console.log("draw", this.getColour().toHexString());
             el.css("background-color", this.getColour().toHexString());
+            el.css("border-color", tinycolor.darken(this.getColour(), 20));
             el.html(this.getColour());
             return el;
         };

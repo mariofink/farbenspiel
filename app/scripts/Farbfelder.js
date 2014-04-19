@@ -33,7 +33,7 @@
         function createFieldsForCombination(colours) {
             var fields = [];
             $.each(colours, function(j, item) {
-                console.log("create field", item);
+//                console.log("create field", item);
                 fields.push(new app.Farbfeld(item));
             });
             return fields;

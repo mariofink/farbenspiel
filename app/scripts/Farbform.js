@@ -14,9 +14,10 @@
             felder.draw();
             return false;
         });
-//        form.find(".js-triggerSubmit").on("change", function() {
-//            form.submit();
-//        });
+        form.find(".js-random-colour").on("click", function() {
+            var col = tinycolor('#'+Math.floor(Math.random()*16777215).toString(16));
+            input.minicolors("value", col.toHexString());
+        });
     }
 
     window.app = window.app || {};
