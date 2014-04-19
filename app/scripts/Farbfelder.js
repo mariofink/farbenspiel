@@ -11,8 +11,8 @@
             canvas.empty();
             var combos = getAllCombinations(baseColour);
             for (var i in combos) {
-                var container = $("<section class='combination'></section>");
-                container.append("<h2>" + i + "</h2>");
+                var container = $("<section class='combination " + i + "'></section>");
+                container.append("<header>" + i + "</header>");
                 container.append(drawFieldsForCombination(combos[i]));
                 canvas.append(container);
             }
@@ -21,9 +21,9 @@
 
         function addEvents() {
             $(".farbfeld").hover(function() {
-                $(this).find(".details").stop().fadeIn();
+                $(this).find(".details").removeClass("hidden");
             }, function() {
-                $(this).find(".details").stop().fadeOut();
+                $(this).find(".details").addClass("hidden");
             });
         }
 
@@ -48,7 +48,7 @@
             return fields;
         }
         function drawFieldsForCombination(combo) {
-            var fields = $("<div></div>");
+            var fields = $("<div class='fields'></div>");
             for (var i in combo) {
                 fields.append(combo[i].draw());
             }
