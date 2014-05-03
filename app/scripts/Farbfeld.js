@@ -2,19 +2,31 @@
 (function (window) {
     'use strict';
     function Farbfeld(_col) {
+        var el = null;
+        var details = null;
+        var col = _col;
         this.getColour = function () {
-            return _col;
+            return col;
+        };
+        this.setColour = function (colour) {
+            col = colour;
+            this.update();
         };
         this.draw = function() {
-            var el = $("<div></div>").addClass("farbfeld");
+            el = $("<div></div>").addClass("farbfeld");
 //            console.log("draw", this.getColour().toHexString());
             el.css("background-color", this.getColour().toHexString());
             el.css("border-color", tinycolor.darken(this.getColour(), 20));
-            var details = $("<section class='details hidden'></section>");
+            details = $("<section class='details hidden'></section>");
             details.append(this.getColour().toHexString());
 //            details.append("<br>" + this.getColour().toRgbString());
             el.html(details);
             return el;
+        };
+        this.update = function() {
+            el.css("background-color", this.getColour().toHexString());
+            el.css("border-color", tinycolor.darken(this.getColour(), 20));
+            details.html(this.getColour().toHexString());
         };
     }
 

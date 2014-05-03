@@ -11,7 +11,7 @@
         form.on("submit", function() {
             var baseColour = input.val();
             felder.setBaseColour(baseColour);
-            felder.draw();
+            felder.update();
             return false;
         });
         form.find(".js-random-colour").on("click", function() {

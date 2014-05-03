@@ -3,56 +3,37 @@
     'use strict';
     function Farbfelder(_baseCol, canvas) {
         var baseColour = _baseCol;
-        var comboTypes = ["monochromatic","analogous","tetrad","splitcomplement","triad"];
+        var colourCombos = [
+            new app.Combination("monochromatic"),
+            new app.Combination("analogous"),
+            new app.Combination("tetrad"),
+            new app.Combination("splitcomplement"),
+            new app.Combination("triad")
+        ];
         this.setBaseColour = function(col) {
             baseColour = col;
         };
         this.draw = function() {
             canvas.empty();
-            var combos = getAllCombinations(baseColour);
-            for (var i in combos) {
-                var container = $("<section class='combination " + i + "'></section>");
-                container.append("<header>" + i + "</header>");
-                container.append(drawFieldsForCombination(combos[i]));
+            for (var i = 0, len = colourCombos.length; i<len; i++) {
+                var combo = colourCombos[i];
+                combo.setBaseColour(baseColour);
+                var container = $("<section class='combination " + combo.type + "'></section>");
+                container.append("<header>" + combo.type + "</header>");
+                container.append(combo.draw());
                 canvas.append(container);
             }
             addEvents();
         };
-
+        this.update = function() {
+            this.draw();
+        };
         function addEvents() {
             $(".farbfeld").hover(function() {
                 $(this).find(".details").removeClass("hidden");
             }, function() {
                 $(this).find(".details").addClass("hidden");
             });
-        }
-
-        function getAllCombinations(base) {
-            var combos = {};
-            for (var i = 0, len = comboTypes.length; i<len; i++) {
-                var colours = tinycolor[comboTypes[i]](base);
-                // reverse order and while keeping the base at the beginning
-                var first = colours.shift();
-                colours = colours.reverse();
-                colours.unshift(first);
-                combos[comboTypes[i]] = createFieldsForCombination(colours);
-            }
-            return combos;
-        }
-        function createFieldsForCombination(colours) {
-            var fields = [];
-            $.each(colours, function(j, item) {
-//                console.log("create field", item);
-                fields.push(new app.Farbfeld(item));
-            });
-            return fields;
-        }
-        function drawFieldsForCombination(combo) {
-            var fields = $("<div class='fields'></div>");
-            for (var i in combo) {
-                fields.append(combo[i].draw());
-            }
-            return fields;
         }
     }
 
