@@ -26,7 +26,10 @@
             addEvents();
         };
         this.update = function() {
-            this.draw();
+            for (var i = 0, len = colourCombos.length; i<len; i++) {
+                var combo = colourCombos[i];
+                combo.setBaseColour(baseColour);
+            }
         };
         function addEvents() {
             $(".farbfeld").hover(function() {

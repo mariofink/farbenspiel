@@ -36,6 +36,7 @@
   height: 3.5em;
   border-right: 1px solid #000;
   display: table-cell;
+  transition: background-color 1s, border-color 1s;
   .details {
     color: #333;
     @include text-shadow(0 0 2px #fff);
