@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>farbenspiel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/jquery-minicolors/jquery.minicolors.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <header>
+        <h1>Farbenspiel</h1>
+        <form id="farbForm">
+            <input type="text" name="colour" class="colourInput" data-control="hue" value="#c0ffee">
+            <!--<button type="submit">Submit</button>-->
+            <button type="button" class="js-random-colour">Zufall</button>
+        </form>
+    </header>
+
+    <div id="farbspiel" class="combo-container"></div>
+
+    <section class="about">
+        <h1>Was ist das hier?</h1>
+        <p><strong>Farbenspiel</strong> ist ein kleines Hobbyprojekt von <a href="http://mariofink.de">Mario Fink – Webentwickler & UX Designer aus Fulda</a></p>
+        <p>
+            Hier einige der verwendeten Werkzeuge und Bausteine:
+            <ul>
+                <li><a href="http://yeoman.io">Yeoman</a></li>
+                <li><a href="http://bgrins.github.io/TinyColor/">Tinycolor</a></li>
+                <li><a href="http://labs.abeautifulsite.net/jquery-minicolors/">jQuery MiniColors</a></li>
+            </ul>
+        </p>
+        <p><a href="https://github.com/mariofink/farbenspiel">Den Quellcode auf GitHub anschauen</a></p>
+    </section>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/tinycolor/tinycolor.js"></script>
+    <script src="/bower_components/jquery-minicolors/jquery.minicolors.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/Farbform.js"></script>
+    <script src="scripts/Combination.js"></script>
+    <script src="scripts/Farbfeld.js"></script>
+    <script src="scripts/Farbfelder.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

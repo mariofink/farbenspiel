@@ -1,0 +1,38 @@
+input, button {
+  color: #333;
+}
+
+button {
+  font-size: 1.5em;
+  background: white;
+  color: #333;
+  border: 1px solid #999;
+}
+
+.minicolors-theme-default {
+  &.minicolors {
+    height: 2.5em;
+    font-size: 1.5em;
+  }
+  .minicolors-input {
+    border: 0;
+    height: 2em;
+    display: inherit;
+    font-size: inherit;
+    text-align: center;
+    padding: .5em .5em .5em 2em;
+    width: 8em;
+  }
+  .minicolors-swatch {
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 2em;
+  }
+}
+.minicolors .minicolors-grid,
+.minicolors-slider-saturation .minicolors-grid-inner,
+.minicolors-slider,
+.minicolors-opacity-slider {
+  background-image: url(../bower_components/jquery-minicolors/jquery.minicolors.png);
+}

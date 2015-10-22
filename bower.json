@@ -1,0 +1,13 @@
+{
+  "name": "farbenspiel",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "tinycolor": "~1.2.1",
+    "jquery-minicolors": "~2.2.1"
+  },
+  "devDependencies": {
+    "chai": "~3.4.0",
+    "mocha": "~2.3.3"
+  }
+}

@@ -1,0 +1,52 @@
+.combo-container {
+
+  //display: table;
+  //width: 100%;
+}
+.combination {
+  padding: 0 0.5em;
+  vertical-align: top;
+  header {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 1em 0 0.5em;
+    text-align: center;
+    text-shadow: 0.05em 0.05em 0 #333;
+  }
+  .fields {
+    display: table;
+    width: 100%;
+  }
+  &.monochromatic,
+  &.analogous {
+    .farbfeld {
+      width: 16.66%;
+    }
+  }
+  &.tetrad {
+    .farbfeld {
+      width: 25%;
+    }
+  }
+  &.splitcomplement,
+  &.triad {
+    .farbfeld {
+      width: 33.33%;
+    }
+  }
+}
+.farbfeld {
+  height: 3.5em;
+  border-right: 1px solid #000;
+  display: table-cell;
+  transition: background-color 1s, border-color 1s;
+  .details {
+    color: #333;
+    text-shadow: 0 0 2px #fff;
+    display: inline-block;
+    padding: 1em;
+    &.hidden {
+      display: none;
+    }
+  }
+}
