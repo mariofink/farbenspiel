@@ -1,8 +1,3 @@
-.combo-container {
-
-  //display: table;
-  //width: 100%;
-}
 .combination {
   padding: 0 0.5em;
   vertical-align: top;
@@ -40,13 +35,16 @@
   border-right: 1px solid #000;
   display: table-cell;
   transition: background-color 1s, border-color 1s;
+  vertical-align: top;
   .details {
     color: #333;
-    text-shadow: 0 0 2px #fff;
     display: inline-block;
+    opacity: 1;
     padding: 1em;
+    text-shadow: 0 0 2px #fff;
+    transition: opacity .5s;
     &.hidden {
-      display: none;
+      opacity: 0;
     }
   }
 }
