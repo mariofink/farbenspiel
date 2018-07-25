@@ -7,7 +7,7 @@
 
         <ul>
             <li v-for="combo in combinations" v-bind:key="combo">
-                {{ combo }}
+                <FarbKombination :colors="combo"></FarbKombination>
             </li>
         </ul>
     </div>
@@ -15,9 +15,11 @@
 
 <script>
 const tinycolor = require("tinycolor2");
+import FarbKombination from "./FarbKombination.vue";
 
 export default {
   name: "FarbenSpiel",
+  components: { FarbKombination },
   data: () => {
     return {
       baseColor: "#c0ffee"
