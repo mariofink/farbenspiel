@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "tinycolor2": "^1.4.1",
     "vue": "^2.5.16"
   },
   "devDependencies": {
