@@ -6,11 +6,9 @@
         {{baseColor}}
 
         <ul>
-            <li>{{combinations.analogous}}</li>
-            <li>{{combinations.monochromatic}}</li>
-            <li>{{combinations.tetrad}}</li>
-            <li>{{combinations.splitcomplement}}</li>
-            <li>{{combinations.triad}}</li>
+            <li v-for="combo in combinations" v-bind:key="combo">
+                {{ combo }}
+            </li>
         </ul>
     </div>
 </template>
