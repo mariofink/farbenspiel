@@ -2,7 +2,8 @@
 <div>
    <h2>{{ title }}</h2>
    <div class="farbkombination">
-       <div class="farbfeld" v-for="(color, index) in colors" v-bind:key="title + color + index" v-bind:style="{backgroundColor: color}">
+       <div class="farbfeld" v-for="(color, index) in colors" v-bind:key="title + color + index"
+       v-bind:style="{ backgroundColor: color, width: 100/colors.length + '%'}">
            {{ color }}
        </div>
    </div>
