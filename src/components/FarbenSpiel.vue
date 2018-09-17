@@ -6,16 +6,16 @@
         {{baseColor}}
 
         <ul class="combinations">
-            <li v-for="combo in combinations" v-bind:key="combo">
-                <FarbKombination :colors="combo"></FarbKombination>
+            <li v-for="combo in combinations" v-bind:key="combo.title">
+                <FarbKombination :colors="combo.colors" :title="combo.title"></FarbKombination>
             </li>
         </ul>
     </main>
 </template>
 
 <script>
-const tinycolor = require("tinycolor2");
 import FarbKombination from "./FarbKombination.vue";
+import ColorCombination from "../ColorCombination.js";
 
 export default {
   name: "FarbenSpiel",
@@ -28,23 +28,18 @@ export default {
   computed: {
     combinations: function() {
       return {
-        analogous: getHexColors(tinycolor(this.baseColor).analogous()),
-        monochromatic: getHexColors(tinycolor(this.baseColor).monochromatic()),
-        tetrad: getHexColors(tinycolor(this.baseColor).tetrad()),
-        splitcomplement: getHexColors(
-          tinycolor(this.baseColor).splitcomplement()
+        analogous: new ColorCombination("Analogous", this.baseColor),
+        monochromatic: new ColorCombination("Monochromatic", this.baseColor),
+        tetrad: new ColorCombination("Tetrad", this.baseColor),
+        splitcomplement: new ColorCombination(
+          "Splitcomplement",
+          this.baseColor
         ),
-        triad: getHexColors(tinycolor(this.baseColor).triad())
+        triad: new ColorCombination("Triad", this.baseColor)
       };
     }
   }
 };
-
-function getHexColors(colors) {
-  return colors.map(function(color) {
-    return color.toHexString();
-  });
-}
 </script>
 
 <style>

@@ -1,15 +1,18 @@
 <template>
+<div>
+   <h2>{{ title }}</h2>
    <div class="farbkombination">
-       <div class="farbfeld" v-for="color in colors" v-bind:key="color" v-bind:style="{backgroundColor: color}">
+       <div class="farbfeld" v-for="(color, index) in colors" v-bind:key="title + color + index" v-bind:style="{backgroundColor: color}">
            {{ color }}
        </div>
    </div>
+</div>
 </template>
 
 <script>
 export default {
   name: "FarbKombination",
-  props: ["colors"]
+  props: ["colors", "title"]
 };
 </script>
 
