@@ -16,9 +16,11 @@ export default {
 <style scoped>
 .farbkombination {
   display: flex;
+  justify-content: space-between;
 }
 
 .farbfeld {
+  color: #000;
   width: 100px;
   height: 100px;
 }
