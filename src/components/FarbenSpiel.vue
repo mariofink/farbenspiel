@@ -7,7 +7,7 @@
 
         <ul class="combinations">
             <li v-for="combo in combinations" v-bind:key="combo.title">
-                <FarbKombination :colors="combo.colors" :title="combo.title"></FarbKombination>
+                <FarbKombination :type="combo" :baseColor="baseColor"></FarbKombination>
             </li>
         </ul>
     </main>
@@ -15,29 +15,21 @@
 
 <script>
 import FarbKombination from "./FarbKombination.vue";
-import ColorCombination from "../ColorCombination.js";
 
 export default {
   name: "FarbenSpiel",
   components: { FarbKombination },
   data: () => {
     return {
-      baseColor: "#c0ffee"
+      baseColor: "#c0ffee",
+      combinations: [
+        "analogous",
+        "monochromatic",
+        "tetrad",
+        "splitcomplement",
+        "triad"
+      ]
     };
-  },
-  computed: {
-    combinations: function() {
-      return {
-        analogous: new ColorCombination("Analogous", this.baseColor),
-        monochromatic: new ColorCombination("Monochromatic", this.baseColor),
-        tetrad: new ColorCombination("Tetrad", this.baseColor),
-        splitcomplement: new ColorCombination(
-          "Splitcomplement",
-          this.baseColor
-        ),
-        triad: new ColorCombination("Triad", this.baseColor)
-      };
-    }
   }
 };
 </script>
