@@ -34,16 +34,8 @@ export default {
 };
 </script>
 
-<style>
-body {
-  background: #333;
-  color: #eee;
-  font-family: Lato, sans-serif;
-}
-
+<style scoped>
 main {
-  max-width: 1280px;
-  margin: 0 auto;
   text-align: center;
 }
 
